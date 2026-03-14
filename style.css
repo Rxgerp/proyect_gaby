@@ -1,0 +1,192 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#ffffff,#ffd6e0);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+overflow-x:hidden;
+padding:20px;
+}
+
+/* CORAZONES */
+
+.corazon{
+position:absolute;
+color:#ff4d6d;
+animation:flotar 8s linear infinite;
+}
+
+@keyframes flotar{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{opacity:1;}
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
+
+/* CORAZON CENTRAL */
+
+.heart-text{
+font-size:70px;
+margin-bottom:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+line-height:1;
+animation:latido 1.2s infinite;
+}
+
+
+
+.heart::before{
+top:-60px;
+left:0;
+}
+
+.heart::after{
+left:60px;
+top:0;
+}
+
+@keyframes latido{
+0%{transform:scale(1);}
+50%{transform:scale(1.15);}
+100%{transform:scale(1);}
+}
+
+/* TARJETA */
+
+.card{
+background:white;
+padding:35px;
+width:100%;
+max-width:420px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+text-align:center;
+}
+
+/* TITULO */
+
+.card h1{
+color:#ff4d6d;
+margin-bottom:15px;
+font-size:28px;
+}
+
+/* TEXTO */
+
+.card p{
+font-size:18px;
+line-height:1.6;
+color:#444;
+}
+
+/* BOTON */
+
+button{
+margin-top:20px;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#ff4d6d;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+/* CARTA */
+
+.carta{
+display:none;
+margin-top:15px;
+animation:aparecer 1s ease;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ================= */
+/* RESPONSIVE */
+/* ================= */
+
+@media (max-width:768px){
+
+.card{
+padding:25px;
+}
+
+.card h1{
+font-size:24px;
+}
+
+.card p{
+font-size:16px;
+}
+
+button{
+font-size:15px;
+padding:10px 22px;
+}
+
+.heart{
+width:90px;
+height:90px;
+}
+
+.heart::before,
+.heart::after{
+width:90px;
+height:90px;
+}
+
+.heart::before{
+top:-45px;
+}
+
+.heart::after{
+left:45px;
+}
+
+}
+
+@media (max-width:480px){
+
+.card{
+padding:20px;
+}
+
+.card h1{
+font-size:22px;
+}
+
+.card p{
+font-size:15px;
+}
+
+}
