@@ -190,3 +190,26 @@ font-size:15px;
 }
 
 }
+
+.contador{
+font-size:22px;
+margin:10px 0;
+color:#92616a;
+font-weight:bold;
+transition:0.5s;
+}
+
+.contador-final{
+color:#ff1493;
+font-size:28px;
+animation:brillo 1s infinite alternate;
+}
+
+@keyframes brillo{
+from{
+text-shadow:0 0 5px #ff1493;
+}
+to{
+text-shadow:0 0 20px #ff1493;
+}
+}
