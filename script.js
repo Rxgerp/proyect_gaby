@@ -9,7 +9,7 @@ document.getElementById("musica").play();
 
 /* CUENTA REGRESIVA */
 
-const fechaObjetivo = new Date("2026-03-25 00:40:00").getTime();
+const fechaObjetivo = new Date("2026-03-26 00:40:00").getTime();
 
 const contador = document.getElementById("contador");
 
